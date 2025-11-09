@@ -8,15 +8,24 @@ __pycache__/
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 
 # PX4 SITL logs
 .ros/
 *.ulg
+*.log
 
 # Python
 *.egg-info/
 dist/
+.pytest_cache/
 /.colcon*
 *.db3
 *.bag
 *.mcap
+
+# OS
+.DS_Store
+Thumbs.db

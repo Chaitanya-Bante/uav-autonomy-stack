@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'slam_playground'
+package_name = 'px4_drone_slam'
 
 setup(
     name=package_name,
@@ -14,7 +14,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='chaitu',
-    maintainer_email='chaitu@todo.todo',
+    maintainer_email='urs.chaitanyaa@gmail.com',
     description='TODO: Package description',
     license='TODO: License declaration',
     extras_require={
