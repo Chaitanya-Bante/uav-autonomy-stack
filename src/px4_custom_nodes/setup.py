@@ -27,6 +27,8 @@ setup(
             'square_flight = px4_custom_nodes.square_flight_node:main',
             'test_connection = px4_custom_nodes.test_connection:main',
             'waypoint_navigator = px4_custom_nodes.waypoint_navigator:main',
+            'teleop = px4_custom_nodes.teleop_node:main',
+            'teleop_keyboard = px4_custom_nodes.teleop_keyboard:main',
         ],
     },
 )

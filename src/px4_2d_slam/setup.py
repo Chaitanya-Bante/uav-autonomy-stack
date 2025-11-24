@@ -1,8 +1,8 @@
 from setuptools import setup
-import os
 from glob import glob
+import os
 
-package_name = 'px4_drone_slam'
+package_name = 'px4_2d_slam'
 
 setup(
     name=package_name,
@@ -13,20 +13,18 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
-        (os.path.join('share', package_name, 'config'), glob('config/*.yaml') if os.path.exists('config') else []),
+        (os.path.join('share', package_name, 'config'), glob('config/*')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='chaitu',
     maintainer_email='chaitu@example.com',
-    description='PX4 drone SLAM integration',
+    description='2D SLAM with PX4 drone',
     license='Apache-2.0',
-    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'camera_bridge = px4_drone_slam.camera_bridge:main',
-            'slam_controller = px4_drone_slam.slam_controller:main',
-            'camera_discovery = px4_drone_slam.camera_discovery:main',
+            'tf_publisher = px4_2d_slam.tf_publisher:main',
+            'odometry_publisher = px4_2d_slam.odometry_publisher:main',
         ],
     },
 )
